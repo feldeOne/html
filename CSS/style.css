@@ -1,0 +1,100 @@
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+  color: #333; /* Grundtextfarbe */
+  overflow: hidden; /* für Pseudo-Elemente */
+}
+
+/* Leistungen: hellblauer Verlauf + diagonale Linien */
+#leistungen {
+  background: linear-gradient(135deg, #f0f8ff 0%, #cde6f7 100%);
+  color: #0a2342;
+}
+#leistungen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.15) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+#ueber-uns {
+  background: linear-gradient(135deg, #f9f9f9 0%, #dfe3e6 100%);
+  color: #4a4a4a;
+}
+#ueber-uns::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.15) 2px, transparent 3px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Kontakt: hellgrauer Verlauf + subtile horizontale Linien */
+#kontakt {
+  background: linear-gradient(135deg, #f8f9fa 0%, #d9dcdc 100%);
+  color: #333;
+}
+#kontakt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1) 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Content vor Pseudo-Elementen */
+section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #e6f7ff; /* sehr helles Blau */
+}
+
+.hero-section {
+  background: url("../IMG/WaescheMain.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero-section .overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* halbtransparent für gute Lesbarkeit */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 0;
+  color: white;
+}
