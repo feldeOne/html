@@ -8,11 +8,11 @@ section {
   display: flex;
   align-items: center;
   padding: 60px 0;
-  color: #333; /* Grundtextfarbe */
-  overflow: hidden; /* für Pseudo-Elemente */
+  color: #333;
+  overflow: hidden;
 }
 
-/* Leistungen: hellblauer Verlauf + diagonale Linien */
+/* Leistungen */
 #leistungen {
   background: linear-gradient(135deg, #f0f8ff 0%, #cde6f7 100%);
   color: #0a2342;
@@ -47,7 +47,7 @@ section {
   z-index: 0;
 }
 
-/* Kontakt: hellgrauer Verlauf + subtile horizontale Linien */
+/* Kontakt */
 #kontakt {
   background: linear-gradient(135deg, #f8f9fa 0%, #d9dcdc 100%);
   color: #333;
@@ -77,7 +77,7 @@ header {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #e6f7ff; /* sehr helles Blau */
+  background-color: #e6f7ff;
 }
 
 .hero-section {
@@ -88,7 +88,7 @@ header {
 }
 
 .hero-section .overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* halbtransparent für gute Lesbarkeit */
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
   display: flex;
@@ -97,4 +97,27 @@ header {
   align-items: center;
   padding: 50px 0;
   color: white;
+}
+
+/* Navbar & Footer in #7e9b62 */
+.navbar,
+footer,
+.bg-dark {
+  background-color: #7e9b62 !important;
+}
+
+.navbar .nav-link,
+.navbar-brand,
+footer,
+footer small {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: #e6f7ff !important;
+}
+
+/* Alle Überschriften in passendem Grünton */
+h1, h2, h3, h4, h5, h6 {
+  color: #5a7b4d;
 }
