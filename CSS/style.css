@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Helvetica:wght@700&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -30,6 +32,45 @@ section {
   );
   pointer-events: none;
   z-index: 0;
+}
+
+/* Änderungsschneiderei */
+#aenderungsschneiderei {
+  background: linear-gradient(135deg, #e3ede4 0%, #cfd8d2 100%);
+  color: #2f3e2f;
+}
+#aenderungsschneiderei::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 2px);
+  background-size: 25px 25px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#aenderungsschneiderei .container {
+  position: relative;
+  z-index: 1;
+}
+
+#aenderungsschneiderei ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#aenderungsschneiderei li::before {
+  content: "✂️";
+  margin-right: 0.5rem;
+}
+
+#aenderungsschneiderei img {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  max-height: 350px;
+  width: 100%;
 }
 
 #ueber-uns {
@@ -107,7 +148,6 @@ footer,
 }
 
 .navbar .nav-link,
-.navbar-brand,
 footer,
 footer small {
   color: white !important;
@@ -120,4 +160,24 @@ footer small {
 /* Alle Überschriften in passendem Grünton */
 h1, h2, h3, h4, h5, h6 {
   color: #5a7b4d;
+}
+
+/* Navbar Branding Aufteilung */
+.navbar-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.navbar-brand .brand-textilpflege {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.navbar-brand .brand-zarina {
+  font-family: 'Italianno', cursive;
+  font-size: 2.4rem;
+  color: white;
 }
